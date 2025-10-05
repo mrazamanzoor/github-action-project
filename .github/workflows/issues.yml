@@ -1,0 +1,11 @@
+name: check issues
+on:
+    issues
+
+jobs:
+    issue:
+        runs-on: ubuntu-latest
+
+        steps:
+        - name: Check issues
+          run: echo "${{ github.event.issue.title }}"
